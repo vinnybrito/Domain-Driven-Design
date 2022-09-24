@@ -1,0 +1,17 @@
+package entrada_processamento_saida;
+
+import java.util.Scanner;
+
+public class Ex38F {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		int v, i, r;
+		
+		System.out.printf("Digite o valor a ser somado: ");
+		v = ler.nextInt();
+
+	}
+
+}

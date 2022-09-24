@@ -1,0 +1,22 @@
+package entrada_processamento_saida;
+
+import java.util.Scanner;
+
+public class Ex36F {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+
+		int x, a, b, r, i;
+		
+		System.out.printf("Digite o valor a ser multiplicado: ");
+		x = ler.nextInt();
+		
+		while (x < 0) {
+			System.out.printf("Valores negativos não são permitidos.\nDigite novamente: ");
+			x = ler.nextInt();
+		}
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+package entrada_processamento_saida;
+
+import java.util.Scanner;
+
+public class Ex34F {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		int n = 5;
+		int i = 1;
+		int t;
+		
+	
+		for (i=1; i<=10; i++) {
+	       if (i == 8)
+	         continue;
+	           
+	            t = n * i;
+	            System.out.printf("\n%d X %d = %d", n, i, t);
+
+			
+		}
+
+	}
+
+}

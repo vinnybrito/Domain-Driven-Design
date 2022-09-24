@@ -1,0 +1,35 @@
+package entrada_processamento_saida;
+
+import java.util.Scanner;
+
+public class Ex30 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+
+		double p, d;
+		String fp;
+		
+		System.out.printf("Digite o valor do produto: ");
+		p = ler.nextDouble();
+		
+		System.out.printf(" 1- Dinheiro ou Cheque\n 2- Cartão de crédito\n 3- Duas parcelas\n 4- Quatro parcelas\n Insira a forma de pagamento: ");
+		fp = ler.next();
+		
+		if (fp.equals("1")) {
+			d = p - (0.10 * p);
+			System.out.printf("Seu desconto é de 10 porcento. O produto custará: %.2f", d);
+		}else if (fp.equals("2")) {
+			d = p - (0.15 * p);
+			System.out.printf("Seu desconto é de 15 porcento. O produto custará: %.2f", d);
+		}else if (fp.equals("3")) {
+			System.out.printf("Produto sem desconto: %.2f", p);
+		}else if (fp.equals("4")){
+			d = p / (4 * 0.10);
+			System.out.printf("Produto com juros de 10 porcento, a cada parcela, será cobrado o valor de: %.2f", d);
+		}else {
+			System.out.printf("Não foi possivel idêntificar sua escolha. Tende novamente.");
+		}
+	}
+
+}

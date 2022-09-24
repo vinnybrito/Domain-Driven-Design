@@ -1,0 +1,30 @@
+package classe_e_atributo;
+
+import java.util.Scanner;
+
+public class Ex51clientes {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("..::Cadastro de Clientes::..");
+		
+		for (int i=1; i<=5; i++) {
+			cliente c = new cliente();
+			
+			System.out.print("Digite o ID: ");
+			c.id = ler.nextInt();
+			
+			System.out.print("Insira o nome: ");
+			c.nome = ler.next();
+			
+			System.out.print("Digite a idade: ");
+			c.idade = ler.nextInt();
+			
+			System.out.print("Insira o E-mail: ");
+			c.email = ler.next();
+		}
+
+	}
+
+}
