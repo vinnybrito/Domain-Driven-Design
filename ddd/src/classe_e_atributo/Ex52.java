@@ -6,9 +6,9 @@ public class Ex52 {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
-		Produto[] listaproduto = new Produto[2];
+		Produto[] listaproduto = new Produto[10];
 		
-		for(int i=0; i<=1; i++) {
+		for(int i=0; i<=9; i++) {
 			Produto p = new Produto();
 			
 			System.out.print("Digite o ID: ");
@@ -25,7 +25,7 @@ public class Ex52 {
 			
 			listaproduto[i] = p;
 		}
-		for(int i=0; i<=1; i++) {
+		for(int i=0; i<=9; i++) {
 			if (listaproduto[i].valor < 100) {
 				
 				System.out.println("ID: " + listaproduto[i].id);
