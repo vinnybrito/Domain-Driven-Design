@@ -9,16 +9,16 @@ public class Ex01 {
 		
 		int b, h, a;
 		
-		System.out.printf("Digite o valor da base do retângulo: ");
+		System.out.print("Digite a base do retângulo: ");
 		b = ler.nextInt();
 		
-		System.out.printf("Digite o valor da altura do retângulo: ");
+		System.out.print("Digite a altura do retângulo: ");
 		h = ler.nextInt();
 		
 		a = b * h;
 		
 		System.out.printf("A área do retângulo é: %d", a);
-		
+
 	}
 
 }
