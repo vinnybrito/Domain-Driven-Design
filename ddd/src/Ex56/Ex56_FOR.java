@@ -47,7 +47,7 @@ public class Ex56_FOR {
 			listaProduto[i] = p;
 		}
 		
-		System.out.print("..:: Produtos e Categorias ::..");
+		System.out.println("..:: Produtos e Categorias ::..");
 		
 		for(int i=0; i<=1; i++) {
 			System.out.print("\n----------------------");
