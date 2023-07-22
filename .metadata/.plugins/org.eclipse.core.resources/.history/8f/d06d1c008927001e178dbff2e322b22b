@@ -1,0 +1,16 @@
+package Ex56;
+
+public class Programa_DO_WHILE {
+
+	public static void main(String[] args) {
+		/* 56. Crie as classes conforme o Diagrama de Classe (UML) abaixo.
+		   Crie Getters e Setters para todos os atributos das classes. Crie
+		   um programa que utilize essas classes para cadastrar 5 produtos
+		   em uma lista de produtos e pergunte para cada produto se ele tem
+		   ou não uma categoria. Caso o produto tenha, permita ele cadastrar
+		   os dados da categoria. Ao final, exibir todos os produtos e suas
+		   respectivas categorias, se houver. */
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package A02_Estrutura_de_Decisao;
+
+import java.util.Scanner;
+
+public class Ex19 {
+
+	public static void main(String[] args) {
+		/* 19. Uma escola com cursos em regime semestral, realiza duas
+		avaliações durante o semestre e calcula a média do aluno,
+		da seguinte maneira:
+
+			 			  MEDIA = (P1 + 2.P2) / 3
+
+		Fazer um programa para entrar via teclado com os valores das
+		notas (P1 e P2) e calcular a média. Exibir a situação final do
+		aluno (“Aprovado ou Reprovado”), sabendo que a média de aprovação
+		é igual a cinco.*/
+
+		Scanner ler = new Scanner(System.in);
+		
+		double p1, p2, m;
+		
+		System.out.printf("Digite o valor da primeira nota: ");
+		p1 = ler.nextDouble();
+		
+		System.out.printf("Digite o valor da segunda nota: ");
+		p2 = ler.nextDouble();
+		
+		m = (p1 + (p2 * 2)) / 3;
+		
+		if (m >= 5) {
+			System.out.printf("Aprovado.");
+		}
+		
+		else {
+			System.out.printf("Reprovado.");
+		}		
+
+	}
+
+}

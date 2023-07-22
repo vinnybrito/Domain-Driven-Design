@@ -1,0 +1,29 @@
+package A03_Estruturas_de_Repeticao;
+
+import java.util.Scanner;
+
+public class Ex33W {
+
+	public static void main(String[] args) {
+		// 33. Entrar via teclado com o sexo de determinado usuário,
+		// aceitar somente “F” ou “M” como respostas válidas. (WHILE)
+
+		Scanner read = new Scanner(System.in);
+		
+		String gender;
+		
+		System.out.print("Digite o seu sexo (F/M): ");
+		gender = read.next().toUpperCase();
+		
+		while ((!gender.equals("F")) && (!gender.equals("M"))) {
+			System.out.print("ERRO! Digite novamente: ");
+			gender = read.next().toUpperCase();
+		}
+		
+		if (gender.equals("F"))
+			System.out.print("Gênero Feminino registrado com sucesso!");
+		else
+			System.out.print("Gênero Masculino registrado com sucesso!");
+	}
+
+}

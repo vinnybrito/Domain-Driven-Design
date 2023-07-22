@@ -1,0 +1,23 @@
+package A03_Estruturas_de_Repeticao;
+
+import java.util.Scanner;
+
+public class Ex31F {
+
+	public static void main(String[] args) {
+		// 31. Criar uma rotina de entrada que aceite
+		// somente um valor positivo. (Use o FOR)
+
+		Scanner read = new Scanner(System.in);
+		
+		int v;
+		
+		System.out.print("Digite um valor positivo: ");
+		v = read.nextInt();
+		
+		for () {
+			
+		}
+	}
+
+}

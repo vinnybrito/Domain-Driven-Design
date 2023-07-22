@@ -1,0 +1,57 @@
+package A03_Estruturas_de_Repeticao;
+
+import java.util.Scanner;
+
+public class Ex36DW {
+
+	public static void main(String[] args) {
+		// 36. Entrar via teclado com um valor (X) qualquer. Travar
+		// a digitação, no sentido de aceitar somente valores positivos.
+		// Solicitar o intervalo que o programa que deverá calcular a
+		// tabuada do valor digitado, sendo que o segundo valor (B),
+		// deverá ser maior que o primeiro (A), caso contrário, digitar
+		// novamente somente o segundo. Após a validação dos dados, exibir
+		// a tabuada do valor digitado, no intervalo decrescente, ou seja,
+		// a tabuada de X no intervalo de B para A. (DO WHILE)
+		
+		Scanner read = new Scanner(System.in);
+		
+		int x, a, b;
+		
+		do {
+			
+			System.out.print("Digite o valor a ser multiplicado: ");
+			x = read.nextInt();
+			
+			if (x < 0) {
+				System.out.print("ERRO. Apenas números positivos. ");
+			}
+			
+		} while (x < 0);
+		
+		do {
+			
+			System.out.print("Digite o menor valor a ser multiplicado: ");
+			a = read.nextInt();
+			
+			System.out.print("Digite o maior valor a ser multiplicado: ");
+			b = read.nextInt();
+			
+			if (b < a) {
+				System.out.print("ERRO. O segundo valor precisa ser maior que o primeiro.\n");
+			}
+			
+		} while (b < a);
+		
+		int r; 
+		
+		do {
+			
+			r = x * b;
+			System.out.printf("\n%d X %d = %d", x, b, r);
+			b -= 1;
+			
+		} while (b <= a);
+	}
+
+}

@@ -1,0 +1,56 @@
+package Ex51;
+
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		// 51. Crie uma classe conforme o Diagrama de Classe (UML). 
+		// Crie um programa que utilize essa classe para cadastrar
+		// 5 clientes em uma lista de clientes (array). Ao final 
+		// exibir apenas os clientes que têm idade superior a 18 anos.
+		
+		Scanner read = new Scanner(System.in);	
+		Cliente [] listaClientes = new Cliente[2];
+		
+		System.out.print("<<--- CADASTRO DE CLIENTES --->>\n");
+		
+		int i;
+		
+		for (i = 1; i <= 2; i++) {
+			
+			Cliente c = new Cliente();
+			
+			System.out.print("\nDigite o ID do cliente: ");
+			c.id = read.nextInt();
+			
+			System.out.print("Digite o nome: ");
+			c.nome = read.next();
+			
+			System.out.print("Digite a idade: ");
+			c.idade = read.nextInt();
+			
+			System.out.print("Digite o email: ");
+			c.email = read.next();
+			
+			listaClientes[i] = c;
+			
+		}
+		
+		System.out.print("\n<<--- CLIENTES ACIMA DE 18 ANOS --->>\n");
+		
+		for (i = 1; i <= 2; i++) {
+			
+			if (listaClientes[i].idade >= 18) {
+				
+				System.out.println("\nID: " + listaClientes[i].id);
+				System.out.println("Nome: " + listaClientes[i].nome);
+				System.out.println("Idade: " + listaClientes[i].idade);
+				System.out.println("E-mail: " + listaClientes[i].email);
+				
+			}
+		}			
+
+	}
+
+}

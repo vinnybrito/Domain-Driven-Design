@@ -1,0 +1,36 @@
+package Ex59;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		ArrayList<Cliente> listaClientes = new ArrayList<>();
+		
+		int opcao;
+		
+		do {
+			
+			System.out.print("\n<<---- Banco Macgyver ---->>");
+			
+			System.out.printf("\n\nEscolha uma opção:\n");          
+	        System.out.printf("1 - Criar cliente/conta \n" +
+	                          "2 - Depósito \n" +
+	                          "3 - Saque \n" +
+	                          "4 - Tranferência \n" +
+	                          "5 - Consulta de Saldo\n" +
+	                          "6 - Sair\n\n");
+
+
+	        System.out.printf("Digite a opção desejada: ");
+	        opcao = read.nextInt();
+			
+			
+		} while ((opcao >= 1) && (opcao <= 5));
+
+	}
+
+}

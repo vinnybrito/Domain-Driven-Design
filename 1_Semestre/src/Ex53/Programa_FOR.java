@@ -1,0 +1,48 @@
+package Ex53;
+
+import java.util.Scanner;
+
+public class Programa_FOR {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		Aluno[] listaAlunos = new Aluno[2];
+		
+		System.out.print("<<--- CADASTRO DE ALUNOS --->>\n");
+		
+		for (int i = 0; i <= 1; i++) {
+			
+			Aluno a = new Aluno();
+			
+			System.out.print("\nRA: ");
+			a.ra = read.next();
+			
+			System.out.print("Nome: ");
+			a.nome = read.next();
+			
+			String[] listaMaterias = new String[6];
+			
+			for (int b = 0; b <= 5; b++) {
+				
+				System.out.print("Matérias: ");
+				listaMaterias[b] = read.next();
+				
+			}
+
+			System.out.print("Periodo (Noite/Manhã): ");
+			a.periodo = read.next();
+		}
+		
+		System.out.print("\n<<--- ALUNOS DO PERIODO NOTURNO --->>\n");
+		
+		for (int i = 0; i <= 1; i++) {
+			
+			if (listaAlunos[i].periodo.equals("noite")) {
+				
+			}
+		}
+
+	}
+
+}

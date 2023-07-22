@@ -1,0 +1,18 @@
+package A03_Estruturas_de_Repeticao;
+
+import java.util.Scanner;
+
+public class Ex34W {
+
+	public static void main(String[] args) {
+		// 34. Exibir a tabuada do número cinco no intervalo de um a dez.
+		
+		Scanner read = new Scanner(System.in);
+		
+		System.out.print("Digite o valor a ser multiplicado: ");
+		
+		
+
+	}
+
+}

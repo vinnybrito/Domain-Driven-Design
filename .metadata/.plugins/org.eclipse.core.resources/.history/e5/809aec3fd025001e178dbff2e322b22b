@@ -1,0 +1,19 @@
+package Ex53;
+
+import java.util.Scanner;
+
+public class Programa_DO_WHILE {
+	
+	/* 53. Crie uma classe conforme o Diagrama de Classe (UML).
+	   Crie um programa que utilize essa classe para cadastrar
+	   5 alunos em uma lista de alunos. Durante o cadastro do aluno,
+	   solicitar para o aluno cadastrar a sigla/iniciais das 6 matérias
+	   que ela está cursando no momento. Ao final exibir apenas os
+	   alunos do período “noite”. */
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+
+	}
+
+}

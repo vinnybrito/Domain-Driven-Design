@@ -1,0 +1,55 @@
+package Ex52;
+
+import java.util.Scanner;
+
+public class Programa_WHILE {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		Produto[] listaProdutos = new Produto[2];
+		
+		System.out.print("<<--- CADASTRO DE PRODUTOS --->>\n");
+		
+		int i = 0;
+		
+		while (i <= 1) {
+			
+			Produto p = new Produto();
+			
+			System.out.print("\nID: ");
+			p.id = read.nextInt();
+			
+			System.out.print("Descrição: ");
+			p.descricao = read.next();
+			
+			System.out.print("Valor: ");
+			p.valor = read.nextDouble();
+			
+			System.out.print("Quantidade: ");
+			p.quantidade = read.nextDouble();
+			
+			listaProdutos[i] = p;
+			i++;
+			
+		}
+		
+		System.out.print("\n<<--- PRODUTOS COM VALOR ABAIXO DE 100 --->>\n");
+		
+		i = 0;
+		
+		while (i <= 1) {
+			
+			if (listaProdutos[i].valor < 100) {
+				
+				System.out.println("\nID: " + listaProdutos[i].id);
+				System.out.println("Descrição: " + listaProdutos[i].descricao);
+				System.out.println("Valor: " + listaProdutos[i].valor);
+				System.out.println("Quantidade: " + listaProdutos[i].quantidade);
+			}
+			i++;
+		}
+
+	}
+
+}

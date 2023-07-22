@@ -1,0 +1,62 @@
+package Ex52;
+
+import java.util.Scanner;
+
+public class Programa_DO_WHILE {
+	
+	/* 52. Crie uma classe conforme o Diagrama de Classe (UML). 
+	   Crie um programa que utilize essa classe para cadastrar 
+	   10 produtos em uma lista de produtos. Ao final exibir apenas
+	   os produtos cujo valor é menor do que 100 reais.  */
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		Produto [] listaProdutos = new Produto[2];
+		
+		System.out.print("<<--- CADASTRO DE PRODUTOS --->>\n");
+		
+		int i = 0;
+		
+		do {
+			
+			Produto p = new Produto();
+			
+			System.out.print("\nID: ");
+			p.id = read.nextInt();
+			
+			System.out.print("Descrição: ");
+			p.descricao = read.next();
+			
+			System.out.print("Valor: ");
+			p.valor = read.nextDouble();
+			
+			System.out.print("Quantidade: ");
+			p.quantidade = read.nextDouble();
+			
+			listaProdutos[i] = p;
+			i++;
+			
+		} while (i <= 1);
+		
+		System.out.print("\n<<--- PRODUTOS COM VALOR ABAIXO DE 100 --->>\n");
+
+		i = 0;
+		
+		do {
+			
+			if (listaProdutos[i].valor < 100) {
+				System.out.println("\nID: " + listaProdutos[i].id);
+				System.out.println("Descrição: " + listaProdutos[i].descricao);
+				System.out.println("Valor: " + listaProdutos[i].valor);
+				System.out.println("Quantidade: " + listaProdutos[i].quantidade);
+			}
+			
+			i++;
+			
+		} while (i <= 1);
+		
+
+	}
+
+}

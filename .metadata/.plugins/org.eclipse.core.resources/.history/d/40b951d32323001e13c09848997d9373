@@ -1,0 +1,20 @@
+package A03_Estruturas_de_Repeticao;
+
+import java.util.Scanner;
+
+public class Ex34F {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		int n = 5, i, r;
+		
+		for (i = 0; i <= 10; i++) {
+			r = n * i;
+			System.out.printf("\n%d X %d = %d", n, i, r);
+			i += 1;
+		}
+
+	}
+
+}

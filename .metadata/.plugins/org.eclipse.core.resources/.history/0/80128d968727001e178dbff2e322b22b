@@ -1,0 +1,16 @@
+package Ex56;
+
+import java.util.Scanner;
+
+public class Programa_FOR {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		Produto listaProdutos = new Produto[2];
+		
+		System.out.print("\n<<--- CADASTRO DE PRODUTOS --->>\n");
+
+	}
+
+}

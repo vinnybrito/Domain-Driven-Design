@@ -1,0 +1,29 @@
+package A03_Estruturas_de_Repeticao;
+
+import java.util.Scanner;
+
+public class Ex37F {
+
+	public static void main(String[] args) {
+		// 37. Exibir a tabuada dos valores de um a vinte, no intervalo
+		// de um a dez. Entre as tabuadas, solicitar que o usuário pressione
+		// uma tecla. (FOR)
+		
+		Scanner read = new Scanner(System.in);
+		
+		int r, i, j;
+		
+		for (j = 1; j <= 20 ; j++) {
+			
+			for (i = 1; i <= 10; i++) {
+				r = j * i;
+				System.out.printf("\n%d X %d = %d", j, i, r);
+			}
+			
+			System.out.printf("\nDigite qualquer tecla para continuar...");
+			read.nextLine();
+		}
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package A02_Estrutura_de_Decisao;
+
+import java.util.Scanner;
+
+public class Ex17 {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+
+	}
+
+}

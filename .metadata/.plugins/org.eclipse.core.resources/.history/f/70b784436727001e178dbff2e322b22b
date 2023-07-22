@@ -1,0 +1,66 @@
+package A02_Estrutura_de_Decisao;
+
+import java.util.Scanner;
+
+public class Ex21 {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		int v1, v2, r, option;
+		
+		System.out.print("Digite o primeiro valor: ");
+		v1 = read.nextInt();
+		
+		System.out.print("Digite o segundo valor: ");
+		v2 = read.nextInt();
+		
+		System.out.print("\nMenu: " +
+						 "\n1- Multiplicação" +
+				         "\n2- Adição" +
+						 "\n3- Divisão" +
+				         "\n4- Subtração" +
+						 "\n5- Fim do Processo");
+		
+		System.out.print("\n\nSelecione uma opção: ");
+		option = read.nextInt();
+		
+		if (option == 1) {
+			r = v1 * v2;
+			System.out.printf("\nResultado: %d", r);
+		}
+		
+		else if (option == 2) {
+			r = v1 + v2;
+			System.out.printf("\nResultado: %d", r);
+		}
+		
+		else if (option == 3) {
+			
+			if (v1 == 0) {
+				System.out.print("Erro!");
+			}
+			
+			else {
+				r = v1 / v2;
+				System.out.printf("\nResultado: %d", r);
+			}
+			
+		}
+		
+		else if (option == 4) {
+			r = v1 - v2;
+			System.out.printf("\nResultado: %d", r);
+		}
+		
+		else if (option == 5) {
+			System.out.printf("\nFim do processo.");
+		}
+		
+		else {
+			System.out.printf("Erro!!!");
+		}
+
+	}
+
+}
