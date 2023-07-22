@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Ex13 {
 
 	public static void main(String[] args) {
-		Scanner read = new Scanner(System.in);
-		
 		// 13. Entrar via teclado com três valores distintos.
 		// Exibir o maior deles.
+		
+		Scanner read = new Scanner(System.in);
 		
 		System.out.print("Digite o primeiro valor: ");
 		int v1 = read.nextInt();

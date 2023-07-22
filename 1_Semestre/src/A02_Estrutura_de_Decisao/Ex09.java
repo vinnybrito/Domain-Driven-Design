@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Ex09 {
 
 	public static void main(String[] args) {
-		Scanner read = new Scanner(System.in);
-		
 		// 9-) Entrar via teclado, com dois valores distintos. 
 		// Exibir o menor deles.
+		
+		Scanner read = new Scanner(System.in);
 		
 		System.out.print("Digite o primeiro valor: ");
 		int v1 = read.nextInt();
