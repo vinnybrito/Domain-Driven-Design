@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Ex03 {
 
 	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
 		// 3-) From the base and height values ​​of a triangle, 
 		// calculate and display its area.
-		
-		Scanner read = new Scanner(System.in);
 		
 		int base, height, area;
 		

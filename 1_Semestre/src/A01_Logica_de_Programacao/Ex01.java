@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Ex01 {
 
 	public static void main(String[] args) {
-		Scanner read = new Scanner(System.in);
-		
 		// 1-) Enter via keyboard the base and height of a rectangle, 
 		// calculate and display its area.
+		
+		Scanner read = new Scanner(System.in);
 		
 		int base, height, area;
 		

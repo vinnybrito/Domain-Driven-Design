@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Ex07 {
 
 	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+
 		// 7-) Entrar via teclado com o valor de cinco produtos.
 		// Após as entradas, digitar um valor referente ao pagamento
 		// da somatória destes valores. Calcular e exibir o troco que
 		// deverá ser devolvido.
-		
-		Scanner read = new Scanner(System.in);
 		
 		System.out.print("1º Produto: ");
 		double p1 = read.nextDouble();
