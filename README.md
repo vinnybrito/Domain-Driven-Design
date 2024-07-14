@@ -1,3 +1,8 @@
+<p align="center">
+    <image src="https://github.com/vinnybrito/Domain-Driven-Design/issues/1#issue-2407554367"></image>
+</p>
+
+
 # Domain Driven Design
 
 <p>
