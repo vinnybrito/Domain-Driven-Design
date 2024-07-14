@@ -1,7 +1,6 @@
 <p align="center">
-    <image src="https://github.com/vinnybrito/Domain-Driven-Design/issues/1#issue-2407554367"></image>
+    <image src="https://github.com/user-attachments/assets/b6be8828-f0a5-49c3-a877-295d5fb9b44d"></image>
 </p>
-
 
 # Domain Driven Design
 
@@ -10,5 +9,9 @@
 </p>
 
 <details>
-  
+    <summary>
+        <h3>1º Semestre</h3>
+    </summary>
+
+    
 </details>
