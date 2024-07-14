@@ -12,6 +12,16 @@
     <summary>
         <h3>1º Semestre</h3>
     </summary>
+    <p>
+        Ao acessar a pasta src do diretório 01_Primeiro_Semestre, será possivel visualiar todo o conteudo de estudo realizado ao longo do primeiro semestre, do curso de
+        domain driven design. abaixo saiba como identificar
+    </p>
+    ### Checkpoints
+    
+    
+    - Lógica de Programação 
+    - Estrutura de Decisão
+    - Laços de Repetição
 </details>
 
 <details>
