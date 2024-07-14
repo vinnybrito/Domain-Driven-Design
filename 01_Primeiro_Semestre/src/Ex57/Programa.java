@@ -7,161 +7,148 @@ import java.util.Scanner;
 public class Programa {
 
 	public static void main(String[] args) throws IOException {
+		Scanner read = new Scanner(System.in);
 		
-		Scanner scanner = new Scanner(System.in);
 		ArrayList <Cliente> listaClientes = new ArrayList<>();
-		Cliente cli;
-		int option, id, indexCliente, id_cliente;
+		
+		Cliente client;
+		int opcao, id, indexCliente, id_cliente;
 		
 		do {
-			showMenu();
-	        option = scanner.nextInt();
+			System.out.print("\n<------ CADASTRO DE CLIENTES ------>");       
+	        System.out.print("\n\nEscolha uma opção:" +
+	        			     "\n 1 - Incluir" +
+	                         "\n 2 - Atualizar" +
+	                         "\n 3 - Excluir" +
+	                         "\n 4 - Exibir" +
+	                         "\n 5 - Sair");
+	        System.out.print("\nDigite a opção desejada: ");
+	        opcao = read.nextInt();
 	        
-	        if (option == 1) {	
-	        	clientRegister(listaClientes, scanner);
-	        } else if (option == 2) {
-	        
-	        	System.out.print("\nClientes cadastrados:\n");
-	        	System.out.print(Cliente.exibirListaClientes(listaClientes));
-
+	        if (opcao == 1) {
+	        	Cliente cliente = new Cliente();
 	        	
-	        	System.out.print("\nDigite o ID do cliente que você deseja atualizar: ");
-	            id = scanner.nextInt();
+	        	if (listaClientes.size() != 0)
+	        		id_cliente = listaClientes.get(listaClientes.size() - 1).getId() + 1;
+	            else 
+	                id_cliente = 1; 
+	            
+	        	cliente.setId(id_cliente);
+
+	        	System.out.print("Nome: ");
+	        	cliente.setNome(read.next());
+	        	
+	        	System.out.print("Idade: ");
+	        	cliente.setIdade(read.nextInt());
+	        	
+	        	System.out.print("E-mail: ");
+	        	cliente.setEmail(read.next());
+	        	
+	        	System.out.print("Possuí conta bancaria? (S/N): ");
+	        	String resposta = read.next();
+	        	
+	        	cliente.setConta(null);
+	        	
+	        	if (resposta.equalsIgnoreCase("S")) {
+	        		ContaBancaria conta = new ContaBancaria();
+	        		
+	        		System.out.print("Agência: ");
+	        		conta.setAgencia(read.next());
+	        		
+	        		System.out.print("Número: ");
+	        		conta.setNumero(read.next());
+	        		
+	        		conta.setSaldo(0.0);
+	        		
+	        		cliente.setConta(conta);
+	        	}
+	        	
+	        	listaClientes.add(cliente);
+	        	
+	        	System.out.printf("\nCliente incluído com sucesso!");
+	            System.in.read();
+	            
+	        } else if (opcao == 2) {
+	        	
+	        	for (Cliente cliente: listaClientes) {
+	        		System.out.println(cliente.exibirCliente());
+	        	}
+	        	
+	        	System.out.print("Digite o ID do cliente que você deseja atualizar: ");
+	            id = read.nextInt();
 	            
 	            indexCliente = -1;
 	            
-	            /*for (Cliente cliente: listaClientes) {
-	            	if (cliente.getId() == id) {  
-	            		indexCliente = listaClientes.indexOf(cliente);
-	                    break;
-	                }
-	            }*/
-	               
-	               if (indexCliente != -1) {
-	                   cli = listaClientes.get(indexCliente);
-	                   
-	                   System.out.print("Digite o seu novo nome: ");
-	                   cli.setNome(scanner.next());
-	                   
-	                   System.out.print("Digite a sua nova idade: ");
-	                   cli.setIdade(scanner.nextInt());
-	                   
-	                   System.out.print("Digite o seu novo e-mail: ");
-	                   cli.setEmail(scanner.next());
-	                   
-	                   System.out.printf("Cliente atualizado com sucesso!");
+	            for (Cliente cliente: listaClientes) {
+	               if (cliente.getId() == id) {
+	                   indexCliente = listaClientes.indexOf(cliente); 
+	                   break;
 	               }
+	            }
 	               
-	               else {
-	                   System.out.printf("Cliente não encontrado!");
-	               }
-	                      
-		           System.in.read();
-	        } else if (option == 3) {
-	     
-	        	System.out.print("\nClientes cadastrados:\n");
-	        	System.out.print(Cliente.exibirListaClientes(listaClientes));
+               if (indexCliente != -1) {
+                   client = listaClientes.get(indexCliente);
+                   
+                   System.out.print("Digite o seu novo nome: ");
+                   client.setNome(read.next());
+                   
+                   System.out.print("Digite a sua nova idade: ");
+                   client.setIdade(read.nextInt());
+                   
+                   System.out.print("Digite o seu novo e-mail: ");
+                   client.setEmail(read.next());
+                   
+                   System.out.printf("Cliente atualizado com sucesso!");
+               } else {
+                   System.out.printf("Cliente não encontrado!");
+               }
+                      
+	           System.in.read();
+	           
+	        } else if (opcao == 3) {
 	        	
-	        	/*for (Cliente cliente: listaClientes) {
-	                   System.out.println(cliente.exibirCliente());
-	        	}*/
+	        	for (Cliente c: listaClientes) {
+	        		System.out.println(c.exibirCliente());
+	        	}
 	               
 	        	System.out.print("Digite o ID do cliente que você deseja excluir: ");
-	            id = scanner.nextInt();
-	               
-	            indexCliente = -1;
-	               
-	            /*for (Cliente cliente: listaClientes) {
-	            	if (cliente.getId() == id) {
-	            		indexCliente = listaClientes.indexOf(cliente);
-	            		break;
-	            	}  
-	            }*/
-	               
-	               if (indexCliente != -1) {                              
-	                   listaClientes.remove(indexCliente);
-	                   System.out.printf("Cliente excluído com sucesso!");
-	               } else {
-	                   System.out.printf("Cliente não encontrado!");
-	               }
-	               
-	               System.in.read();
-	        } else if (option == 4) {
+	        	id = read.nextInt();
+               
+	        	indexCliente = -1;
+               
+	        	for (Cliente c: listaClientes) {
+	        		if (c.getId() == id) {
+	        			indexCliente = listaClientes.indexOf(c);
+	        			break;
+	        		}  
+	        	}
+               
+               if (indexCliente != -1) {                              
+                   listaClientes.remove(indexCliente);
+                   System.out.printf("Cliente excluído com sucesso!");
+               } else {
+                   System.out.printf("Cliente não encontrado!");
+               }
+               
+               System.in.read();
+               
+	        } else if (opcao == 4) {
 	        	
-	        	System.out.print("\nCLIENTES CADASTRADOS:\n");
-	        	System.out.print(Cliente.exibirListaClientes(listaClientes));
+	        	for (Cliente cliente: listaClientes) {
+	        		System.out.print(cliente.exibirCliente());
+	        		
+	        		if (cliente.getConta() != null)
+	        			System.out.print(cliente.exibirDadosConta());
+	        	}
 	        	
-	        	showProceedMessage();
-	        	
-	        } else if (option == 5) {
-	        	System.out.print("\nVocê escolheu sair...\nDeseja mesmo sair? (Sim = 1 / Não = 2)\nResposta: ");
-	        	int exit = scanner.nextInt();
-	        	
-	        	if (exit == 1) 
-	        		option = 6;
-	        	
-	        	showProceedMessage();
+	        	System.in.read(); 
 	        }
 			
-		} while ((option >= 1) && (option <= 5));
+		} while ((opcao >= 1) && (opcao <= 4));
 		
-		System.out.print("\nAté a proxima!");
+		System.out.print("\nFim do Cadastro!");
 
-		scanner.close();
+		read.close();
 	}
-	
-	private static void showMenu() throws IOException {
-		System.out.print("\n<------ CADASTRO DE CLIENTES ------>");       
-        System.out.print("\n\nEscolha uma opção:" +
-        			     "\n 1 - Incluir" +
-                         "\n 2 - Atualizar" +
-                         "\n 3 - Excluir" +
-                         "\n 4 - Exibir" +
-                         "\n 5 - Sair");
-        System.out.print("\nDigite a opção desejada: ");
-	}
-	
-	private static void clientRegister(ArrayList<Cliente> listaClientes, Scanner scanner) throws IOException {
-		Cliente cliente = new Cliente();
-    	
-    	cliente.setId(cliente.gerarId(listaClientes));
-
-    	System.out.print("Nome: ");
-    	cliente.setNome(scanner.next());
-    	
-    	System.out.print("Idade: ");
-    	cliente.setIdade(scanner.nextInt());
-    	
-    	System.out.print("E-mail: ");
-    	cliente.setEmail(scanner.next());
-    	
-    	System.out.print("Possuí conta bancaria? (S/N): ");
-    	String answer = scanner.next();
-    	
-    	cliente.setConta(null);
-    	
-    	if (answer.equalsIgnoreCase("S")) {	
-    		ContaBancaria conta = new ContaBancaria();
-    		
-    		System.out.print("Agência: ");
-    		conta.setAgencia(scanner.next());
-    		
-    		System.out.print("Número: ");
-    		conta.setNumero(scanner.next());
-    		
-    		conta.setSaldo(0.0);
-    		
-    		cliente.setConta(conta);
-    	}
-    	
-    	listaClientes.add(cliente);
-    	
-    	showProceedMessage();
-	}
-	
-    private static void showProceedMessage() throws IOException {
-        System.out.printf("\nAperte a tecla ENTER para prosseguir...");
-        System.in.read();
-    }
 
 }

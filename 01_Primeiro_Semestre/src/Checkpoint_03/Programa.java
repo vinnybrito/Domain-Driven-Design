@@ -27,7 +27,7 @@ public class Programa {
 
 			opcao = scanner.nextInt();
 			
-			if(opcao < 4 && opcao > 0){
+			if (opcao < 4 && opcao > 0){
 				System.out.println("Digite o nome a ser cadastrado: ");
 				nome = scanner.next();
 
@@ -35,7 +35,7 @@ public class Programa {
 				ra = scanner.next();
 			}
 			
-			if(opcao == 1){
+			if (opcao == 1) {
 				Aluno aluno = new Aluno();
 				
 				aluno.setNome(nome);
@@ -48,9 +48,8 @@ public class Programa {
 				
 				System.out.println("Aluno "+nome+" cadastrado com sucesso!");
 				System.in.read();
-			}
-			
-			else if(opcao == 2){
+				
+			} else if (opcao == 2) {
 				Professor prof = new Professor();
 				
 				prof.setNome(nome);
@@ -72,9 +71,8 @@ public class Programa {
 				
 				System.out.println("Professor "+nome+" cadastrado com sucesso!");
 				System.in.read();
-			}
-			
-			else if(opcao == 3){
+				
+			} else if (opcao == 3){
 				Coordenador coord = new Coordenador();
 				
 				coord.setNome(nome);
