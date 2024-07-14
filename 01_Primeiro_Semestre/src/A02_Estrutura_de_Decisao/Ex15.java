@@ -24,7 +24,7 @@ public class Ex15 {
 		System.out.print("Digite o terceiro valor: ");
 		double v3 = scanner.nextDouble();
 		
-		if ( (v1 + v2 > v3) && (v2 + v3 > v1) && (v1 + v3 > v2) ) {
+		if ((v1 + v2 > v3) && (v2 + v3 > v1) && (v1 + v3 > v2)) {
 			System.out.println("Os valores digitados formam um Triângulo:");
 			
 			if ((v1 == v2) && (v1 == v3))

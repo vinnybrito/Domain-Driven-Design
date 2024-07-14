@@ -19,7 +19,7 @@ public class Ex13 {
 		System.out.print("Insira o terceiro valor: ");
 		int v3 = scanner.nextInt();
 		
-		if ( (v1 > v2) && (v1 > v3) )
+		if ((v1 > v2) && (v1 > v3))
 			System.out.println("\nO primeiro valor é o maior.");
 		else if ( (v2 > v1) && (v2 > v3) )
 			System.out.println("\nO segundo valor é o maior.");
