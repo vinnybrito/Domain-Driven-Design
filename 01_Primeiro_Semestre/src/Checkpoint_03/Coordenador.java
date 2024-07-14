@@ -6,7 +6,6 @@ public class Coordenador extends Pessoa{
 	public String[] getCursos() {
 		return cursos;
 	}
-
 	public void setCursos(String[] disciplinas) {
 		this.cursos = disciplinas;
 	}

@@ -6,7 +6,6 @@ public class Professor extends Pessoa {
 	public String[] getDisciplinas() {
 		return disciplinas;
 	}
-
 	public void setDisciplinas(String[] disciplinas) {
 		this.disciplinas = disciplinas;
 	}

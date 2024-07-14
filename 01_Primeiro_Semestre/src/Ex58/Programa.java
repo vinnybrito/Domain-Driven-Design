@@ -16,15 +16,12 @@ public class Programa {
 		
 		do {
 			System.out.print("\n<<-- SISTEMA DE CADASTRO DE PRODUTOS -->>");
-			
 			System.out.printf("\n\nEscolha uma opção:\n");          
 	        System.out.printf("1 - Incluir \n" +
 	                          "2 - Atualizar \n" +
 	                          "3 - Excluir \n" +
 	                          "4 - Exibir \n" +
 	                          "5 - Sair\n\n");
-
-
 	        System.out.printf("Digite a opção desejada: ");
 	        opcao = read.nextInt();
 	        
