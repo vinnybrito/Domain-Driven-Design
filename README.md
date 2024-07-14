@@ -12,6 +12,10 @@
     <summary>
         <h3>1º Semestre</h3>
     </summary>
+</details>
 
-    
+<details>
+    <summary>
+        <h3>2º Semestre</h3>
+    </summary>
 </details>
