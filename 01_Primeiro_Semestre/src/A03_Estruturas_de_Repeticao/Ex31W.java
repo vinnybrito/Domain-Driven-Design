@@ -10,10 +10,8 @@ public class Ex31W {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		int valor;
-		
 		System.out.print("Insira um valor positivo: ");
-		valor = scanner.nextInt();
+		int valor = scanner.nextInt();
 		
 		while (valor < 0) {
 			System.out.print("O valor precisa ser positivo, digite novamente: ");
@@ -21,6 +19,8 @@ public class Ex31W {
 		}
 		
 		System.out.print("Número positivo registrado com sucesso!");
+		
+		scanner.close();
 	}
 
 }

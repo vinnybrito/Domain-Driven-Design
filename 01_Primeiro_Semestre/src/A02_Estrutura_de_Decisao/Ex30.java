@@ -20,7 +20,7 @@ public class Ex30 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		double desconto, precoNormal;
+		double desconto, precoNormal, juros;
 		
 		System.out.print("Insira o valor do Produto: ");
 		double produto = scanner.nextDouble();
@@ -34,17 +34,21 @@ public class Ex30 {
 		
 		switch (option) {
 			case 1:
-				//desconto = produto - (produto * 0.10);
-				System.out.printf("Valor com desconto: %.2f", desconto = produto - (produto * 0.10));
+				System.out.printf("\nValor total com desconto: R$%.2f", desconto = produto - (produto * 0.10));
+				System.out.printf("\nDesconto de R$%.2f", produto = produto - desconto);
 				break;
 			case 2:
-				desconto = produto - (produto * 0.15);
-				System.out.print("Valor com desconto: ");
+				System.out.printf("\nValor total com desconto: %.2f", desconto = produto - (produto * 0.15));
+				System.out.printf("\nDesconto de R$%.2f", produto = produto - desconto);
 				break;
 			case 3:
-				System.out.print("Valor sem desconto e sem Juros: ");
+				System.out.printf("\nValor sem desconto e sem Juros: R$%.2f", produto);
+				System.out.printf("\nDuas parcelas de R$%.2f", produto / 2);
 				break;
 			case 4:
+				System.out.printf("\nValor total com juros: R$%.2f", juros = produto + (produto * 0.10));
+				System.out.printf("\nQuatro parcelas de R$%.2f", juros / 4);
+				System.out.printf("\nJuros de R$%.2f", juros -= produto);
 				break;
 			default:
 				System.out.printf("Não foi possivel idêntificar a forma de pagamento.");

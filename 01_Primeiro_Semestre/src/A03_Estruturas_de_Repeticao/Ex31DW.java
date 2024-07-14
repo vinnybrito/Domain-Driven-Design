@@ -18,6 +18,8 @@ public class Ex31DW {
 		} while (valor < 0);
 		
 		System.out.print("Número positivo registrado com sucesso!");
+		
+		scanner.close();
 	}
 
 }
