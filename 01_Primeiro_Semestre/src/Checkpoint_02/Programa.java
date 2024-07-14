@@ -3,6 +3,15 @@ package Checkpoint_02;
 import java.util.Scanner;
 
 public class Programa {
+	
+	// CP2 - Crie as classes conforme o Diagrama de Classe (UML) abaixo. 
+	// Crie Getters e Setters para todos os atributos das classes. 
+	// Crie um programa que utilize essas classes para cadastrar 5
+	// alunos em uma lista de alunos e pergunte para cada aluno se 
+	// ele está ou não matriculado em um curso. Caso o aluno esteja 
+	// matriculado, permita ele cadastrar os dados do curso. Ao final,
+	// exibir todos os alunos e seu respectivo curso, se houver.
+
 
 	public static void main(String[] args) {
 		
