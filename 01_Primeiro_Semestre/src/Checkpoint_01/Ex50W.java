@@ -5,38 +5,55 @@ import java.util.Scanner;
 public class Ex50W {
 
 	public static void main(String[] args) {
-		Scanner ler = new Scanner(System.in);
-		int a,b,x1,n1;
+		Scanner scanner = new Scanner(System.in);
+		
+		int par = 0, impar = 0;
 		
 		System.out.printf("Digite um valor qualquer(A): ");
-		a = ler.nextInt();
+		int a = scanner.nextInt();
 		
 		System.out.printf("Digite um valor qualquer(B): ");
-		b = ler.nextInt();
+		int b = scanner.nextInt();
 		
-		while(a==b) {
+		while (a == b) {
 			System.out.printf("Invalido! Os valores não podem ser iguais.");
 			System.out.printf("Digite um valor qualquer(B): ");
-			b=ler.nextInt();
+			b = scanner.nextInt();
 		}
 		
-		if(a>b) {
-			x1 = a;
-			
-		    n1 = b;
-		}else {
-			n1 = a;
-			
-		    x1 = b;
-		}
-		
-		for(x1 = n1; n1 <= x1; n1++) {
-			if((n1 % 2) == 0 && (n1 > 10)) {
-				System.out.println(n1);
+		for (int i = a; i <= b; i++) {
+			if (a % 2 == 0) {
+				a = impar;
+				impar = impar + 1;		
+			} else {
+				a = par;
+				par = par + 1;
 			}
 		}
+		
+		System.out.print("\nA quantidade de números pares é: " + par);
+		System.out.print("\nA quantidade de números ímpares é: " + impar);
 
+		scanner.close();
 	}
+	
+	
+	//------------------------------------------------
+	
+	/*if (a % 2 == 0) {
+		par = a;
+		impar = b;
+	} else {
+		impar = a;
+		par = b;
+	}
+	
+	for (par = impar; impar <= par; impar++) {
+		if((impar % 2) == 0 && (impar > 10)) {
+			System.out.println(impar);
+		}
+	}*/
+	
 	/*
 	 inteiro = int(input('Digite o intervalo que será solicitado dos valores: '))
 	n = 1

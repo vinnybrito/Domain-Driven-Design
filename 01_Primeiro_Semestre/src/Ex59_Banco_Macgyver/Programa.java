@@ -1,4 +1,4 @@
-package Ex59;
+package Ex59_Banco_Macgyver;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -179,7 +179,7 @@ public class Programa {
 	        		}
 	        	}
                
-	        	if ( (indexClienteOrigem != -1) && (indexClienteDestino != -1) ) {
+	        	if ((indexClienteOrigem != -1) && (indexClienteDestino != -1)) {
 	        		cli_origem = listaClientes.get(indexClienteOrigem);
 	        		cli_destino = listaClientes.get(indexClienteDestino);
                    

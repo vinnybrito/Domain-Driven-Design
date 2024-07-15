@@ -40,6 +40,7 @@ public class Ex50F {
 		else:
 		    n1 = a
 		    x1 = b
+		
 		for n1 in range(n1,x1+1,1):
 		    if((n1%2) == 0 and (n1>10)):
 		        print(n1)

@@ -1,4 +1,4 @@
-package Ex60;
+package Ex60_Banco_Macgyver;
 
 public class Cliente {
     private int id;

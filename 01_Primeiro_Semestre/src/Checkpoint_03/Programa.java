@@ -72,7 +72,7 @@ public class Programa {
 				System.out.println("\nProfessor(a) " + nome + " cadastrado(a) com sucesso!");
 				System.in.read();
 				
-			} else if (opcao == 3){
+			} else if (opcao == 3) {
 				Coordenador coordenador = new Coordenador();
 				
 				coordenador.setNome(nome);

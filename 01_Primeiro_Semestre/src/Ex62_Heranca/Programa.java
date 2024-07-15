@@ -1,4 +1,4 @@
-package Ex62;
+package Ex62_Heranca;
 
 public class Programa {
 	
