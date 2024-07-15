@@ -3,51 +3,50 @@ package Checkpoint_01;
 import java.util.Scanner;
 
 public class Ex50F {
+	
+	// 50 - Crie um programa que receba dois números inteiros do usuário e 
+	// calcule a quantidade de números pares e ímpares no intervalo entre esses
+	// dois números (inclusive). O programa deve garantir que os números fornecidos
+	// pelo usuário sejam diferentes. (Use o FOR)
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		int b;
+		int par = 0, impar = 0;
 		
-		System.out.print("Digite o valor de A: ");
+		System.out.printf("Digite um valor qualquer(A): ");
 		int a = scanner.nextInt();
 		
-		System.out.print("Digite o valor de B: ");
-		b = scanner.nextInt();
+		System.out.printf("Digite um valor qualquer(B): ");
+		int b = scanner.nextInt();
 		
 		while (a == b) {
-			System.out.print("os valores sao iguais, digite novamente: ");
+			System.out.printf("Invalido! Os valores não podem ser iguais.");
+			System.out.printf("Digite um valor qualquer(B): ");
 			b = scanner.nextInt();
 		}
 		
-		if (a > b) {
-			
-		}
+        int inicio, fim;
+        
+        if (a < b) {
+            inicio = a;
+            fim = b;
+        } else {
+            inicio = b;
+            fim = a;
+        }
+        
+        for (int i = inicio; i <= fim; i++) {
+            if (i % 2 == 0)
+            	par++;
+            else
+                impar++;
+        }
+		
+		System.out.print("\nA quantidade de números pares é: " + par);
+		System.out.print("\nA quantidade de números ímpares é: " + impar);
 
+		scanner.close();
 	}
 	
-	/*
-	 	a = int(input("Digite o valor de A: "))
-		b = int(input("Digite o valor de B: "))
-		
-		while(a == b):
-		    print("os valores sao iguais, digite novamente: ")
-		    b = int(input("Digite o valor de B: "))
-		
-		if(a > b):
-		    x1 = a
-		    n1 = b
-		else:
-		    n1 = a
-		    x1 = b
-		
-		for n1 in range(n1,x1+1,1):
-		    if((n1%2) == 0 and (n1>10)):
-		        print(n1)
-		        
-		        
-print('A quantidade de números pares é: ', p)
-print('A quantidade de números ímpares é: ', i)
-	 */
-
 }
