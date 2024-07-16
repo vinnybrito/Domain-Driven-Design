@@ -5,9 +5,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Programa {
+	
+	// 58 - Crie um sistema com as classes conforme o Diagrama de Classe (UML) abaixo. 
+	// Crie Getters e Setters para todos os atributos das classes. Crie um programa que
+	// utilize essas classes para cadastrar 5 produtos em uma lista de produtos e pergunte
+	// para cada produto se ele tem ou não uma categoria. Caso o produto tenha, permita
+	// ele cadastrar os dados da categoria. Ao final, exibir todos os produtos e suas
+	// respectivas categorias, se houver
 
 	public static void main(String[] args) throws IOException {
-		Scanner read = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		ArrayList<Produto> listaProdutos = new ArrayList<>();
 		
@@ -15,81 +22,66 @@ public class Programa {
 		int opcao, id, id_Produto, indexProduto;
 		
 		do {
-			System.out.print("\n<<-- SISTEMA DE CADASTRO DE PRODUTOS -->>");
-			System.out.printf("\n\nEscolha uma opção:\n");          
-	        System.out.printf("1 - Incluir \n" +
-	                          "2 - Atualizar \n" +
-	                          "3 - Excluir \n" +
-	                          "4 - Exibir \n" +
-	                          "5 - Sair\n\n");
+			System.out.print("\n<<---- CADASTRO DE PRODUTOS ---->>");        
+	        System.out.printf("\n\nEscolha uma opção:" +
+	        				  "\n 1 - Incluir" +
+	                          "\n 2 - Atualizar" +
+	                          "\n 3 - Excluir" +
+	                          "\n 4 - Exibir" +
+	                          "\n 5 - Sair\n\n");
 	        System.out.printf("Digite a opção desejada: ");
-	        opcao = read.nextInt();
-	        
-	        //---------------- PRIMEIRA OPÇÃO ----------------//
+	        opcao = scanner.nextInt();
 	        
 	        if (opcao == 1) {
+	        	Produto produto = new Produto();
 	        	
-	        	Produto p = new Produto();
+	        	id_Produto = produto.gerarId(listaProdutos);
 	        	
-	        	if (listaProdutos.size() != 0) 
-	        		id_Produto = listaProdutos.get(listaProdutos.size() -1).getId() + 1;
-	        	else 
-	        		id_Produto = 1;
-	        	
-	        	p.setId(id_Produto);
+	        	produto.setId(id_Produto);
 	        	
 	        	System.out.print("Produto: ");
-	        	p.setNome(read.next());
+	        	produto.setNome(scanner.next());
 	        	
 	        	System.out.print("Preço: ");
-	        	p.setPreco(read.nextDouble());
+	        	produto.setPreco(scanner.nextDouble());
 	        	
 	        	System.out.print("Quantidade: ");
-	        	p.setQuantidade(read.nextDouble());
+	        	produto.setQuantidade(scanner.nextDouble());
 	        	
 	        	System.out.print("Produto possuí categoria? (S/N): ");
-	        	String resposta = read.next().toUpperCase();
+	        	String resposta = scanner.next().toUpperCase();
+	        	
+	        	produto.setCategoria(null);
 	        	
 	        	if (resposta.equals("S")) {
-	        		
-	        		Categoria c = new Categoria();
+	        		Categoria categoria = new Categoria();
 	        		
 	        		System.out.print("Código: ");
-	        		c.setId(read.nextInt());
+	        		categoria.setId(scanner.nextInt());
 	        		
 	        		System.out.print("Marca: ");
-	        		c.setNome(read.next());
+	        		categoria.setNome(scanner.next());
 	        		
-	        		p.setCategoria(c);
-	        		
+	        		produto.setCategoria(categoria);
 	        	}
 	        	
-	        	else {
-	        		p.setCategoria(null);
-	        	}
-	        	
-	        	listaProdutos.add(p);
+	        	listaProdutos.add(produto);
 	        	
 	        	System.out.print("\nProduto cadastrado com sucesso!");
 	        	System.in.read();
 	        	
-	        }
-	        
-	        //---------------- SEGUNDA OPÇÃO ----------------//
-	        
-	        else if (opcao == 2) {
+	        } else if (opcao == 2) {
 	        	
-	        	for (Produto p: listaProdutos) {
-	        		System.out.print(p.exibirProduto());
+	        	for (Produto produto: listaProdutos) {
+	        		System.out.print(produto.exibirProduto());
 	        	}
 	        	
 	        	System.out.print("Digite o ID no produto que deseja atualizar: ");
-	        	id = read.nextInt();
+	        	id = scanner.nextInt();
 	        	
 	        	indexProduto = -1;
 	        	
 	        	for (Produto p: listaProdutos) {
-	        		
 	        		if (p.getId() == id) {
 	        			indexProduto = listaProdutos.indexOf(p);
 	        			break;
@@ -100,40 +92,35 @@ public class Programa {
 	        		prod = listaProdutos.get(indexProduto);
 	        		
 	        		System.out.print("Novo Produto: ");
-		        	prod.setNome(read.next());
+		        	prod.setNome(scanner.next());
 		        	
 		        	System.out.print("Novo Preço: ");
-		        	prod.setPreco(read.nextDouble());
+		        	prod.setPreco(scanner.nextDouble());
 		        	
 		        	System.out.print("Nova Quantidade: ");
-		        	prod.setQuantidade(read.nextDouble());
+		        	prod.setQuantidade(scanner.nextDouble());
 		        	
 		        	System.out.print("\nProduto atualizado com sucesso!");
-	        	}
-	        	
-	        	else {
+	        	} else {
 	        		System.out.print("Produto Não encontrado!");
 	        	}
 	        	
 	        	System.in.read();
-	        }
-	        
-	        //---------------- TERCEIRA OPÇÃO ----------------//
-	        
-	        else if (opcao == 3) {
 	        	
-	        	for (Produto p: listaProdutos) {
-	        		System.out.print(p.exibirProduto());
+	        } else if (opcao == 3) {
+	        	
+	        	for (Produto produto: listaProdutos) {
+	        		System.out.print(produto.exibirProduto());
 	        	}
 	        	
 	        	System.out.print("Digite o ID do produto que seja excluir: ");
-	        	id = read.nextInt();
+	        	id = scanner.nextInt();
 	        	
 	        	indexProduto = -1;
 	        	
-	        	for (Produto p: listaProdutos) {
-	        		if (p.getId() == id) {
-	        			indexProduto = listaProdutos.indexOf(p);
+	        	for (Produto produto: listaProdutos) {
+	        		if (produto.getId() == id) {
+	        			indexProduto = listaProdutos.indexOf(produto);
 	        			break;
 	        		}
 	        	}
@@ -141,25 +128,18 @@ public class Programa {
 	        	if (indexProduto != -1) {
 	        		listaProdutos.remove(indexProduto);
 	        		System.out.print("Produto excluido com sucesso!");
-	        	}
-	        	
-	        	else {
+	        	} else {
 	        		System.out.print("Produto não encontrado!");
 	        	}
 	        	
 	        	System.in.read();
-	        }
-	        
-	        //---------------- QUARTA OPÇÃO ----------------//
-	        
-	        else if (opcao == 4) {
 	        	
-	        	for (Produto p: listaProdutos) {
-	        		System.out.print(p.exibirProduto());
-	        		
-	        		if (p.getCategoria() != null) {
-	        			System.out.print(p.exibirCategoria());
-	        		}
+	        } else if (opcao == 4) {
+	        	
+	        	for (Produto produto: listaProdutos) {
+	        		System.out.print(produto.exibirProduto());
+	        		if (produto.getCategoria() != null)
+	        			System.out.print(produto.exibirCategoria());
 	        	}
 	        	
 	        	System.in.read();
@@ -169,6 +149,7 @@ public class Programa {
 		
 		System.out.print("\nFim do cadastro!");
 
+		scanner.close();
 	}
 
 }

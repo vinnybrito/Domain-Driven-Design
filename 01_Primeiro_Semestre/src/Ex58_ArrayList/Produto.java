@@ -1,5 +1,9 @@
 package Ex58_ArrayList;
 
+import java.util.ArrayList;
+
+import Ex57_ArrayList.Cliente;
+
 public class Produto {
 	private int id;
 	private String nome;
@@ -55,6 +59,13 @@ public class Produto {
 		this.preco = preco;
 		this.quantidade = quantidade;
 		this.categoria = categoria;
+	}
+	
+	public int gerarId(ArrayList<Produto> listaClientes) {
+		if (listaClientes.size() != 0) 
+    		return listaClientes.get(listaClientes.size() - 1).getId() + 1;
+        else 
+        	return 1;
 	}
 	
 	public String exibirProduto() {

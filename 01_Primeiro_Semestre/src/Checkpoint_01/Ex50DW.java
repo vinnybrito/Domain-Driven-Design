@@ -12,13 +12,12 @@ public class Ex50DW {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		int par = 0, impar = 0;
-		int a, b, inicio, fim;
+		int a, b, par = 0, impar = 0, inicio, fim;
+		
+		System.out.printf("Digite um valor qualquer(A): ");
+		a = scanner.nextInt();
 		
 		do {
-			System.out.printf("Digite um valor qualquer(A): ");
-			a = scanner.nextInt();
-			
 			System.out.printf("Digite um valor qualquer(B): ");
 			b = scanner.nextInt();
 		} while (a == b);
@@ -34,7 +33,7 @@ public class Ex50DW {
         int i = inicio;
         
         do {
-        	if (i % 2 == 0) {
+        	if ((i % 2) == 0) {
         		par++;
         	} else {
         		impar++;

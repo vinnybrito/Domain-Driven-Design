@@ -12,7 +12,6 @@ public class Programa {
 	// matriculado, permita ele cadastrar os dados do curso. Ao final,
 	// exibir todos os alunos e seu respectivo curso, se houver.
 
-
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);

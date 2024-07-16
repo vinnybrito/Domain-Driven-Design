@@ -12,7 +12,7 @@ public class Ex50W {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		int par = 0, impar = 0;
+		int par = 0, impar = 0, inicio, fim;
 		
 		System.out.printf("Digite um valor qualquer(A): ");
 		int a = scanner.nextInt();
@@ -21,12 +21,9 @@ public class Ex50W {
 		int b = scanner.nextInt();
 		
 		while (a == b) {
-			System.out.printf("Invalido! Os valores não podem ser iguais.");
-			System.out.printf("Digite um valor qualquer(B): ");
+			System.out.printf("Os valores não podem ser iguais.\nDigite um valor qualquer(B): ");
 			b = scanner.nextInt();
 		}
-		
-        int inicio, fim;
         
         if (a < b) {
             inicio = a;

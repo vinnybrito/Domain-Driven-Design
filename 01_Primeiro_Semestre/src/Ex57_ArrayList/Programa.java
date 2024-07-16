@@ -5,6 +5,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Programa {
+	
+	// 57 - Crie um sistema com as classes conforme o Diagrama de Classe (UML) abaixo.
+	// Crie Getters e Setters para todos os atributos das classes. Crie um programa que
+	// utilize essas classes para cadastrar 5 clientes em uma lista de clientes e pergunte
+	// para cada cliente se ele tem ou não conta bancária. Caso o cliente tenha, permita
+	// ele cadastrar os dados da conta bancária. Ao final, exibir todos os clientes e suas
+	// respectivas contas bancárias, se houver.
 
 	public static void main(String[] args) throws IOException {
 		Scanner read = new Scanner(System.in);
