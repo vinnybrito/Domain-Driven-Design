@@ -107,13 +107,17 @@ public class Programa {
 							System.out.print("\n" + cs.mostrarContaSalario());
 						}
 					}
+				} else {
+					System.out.print("\nNão há contas registradas.");
 				}
 				
 				System.out.print("\n\nPrecione a tecla Enter para continuar...");
 				System.in.read();
 			}
 			
-		} while (opcao > 0 && opcao <= 5);
+		} while (opcao > 0 && opcao < 5);
+		
+		System.out.print("\nFim do Programa.");
 		
 		scanner.close();
 	}

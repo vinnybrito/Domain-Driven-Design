@@ -9,7 +9,7 @@ public class ContaSalario extends Conta {
 	}
 	
 	public String mostrarContaSalario() {
-		return "Conta Salário - Agência: " + this.agencia +
+		return "\nConta Salário - Agência: " + this.agencia +
 			   " - Número: " + this.numero +
 			   " - Saldo: " + this.saldo;
 	}
