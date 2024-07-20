@@ -18,7 +18,7 @@ public class Ex32W {
 		int v2 = scanner.nextInt();
 		
 		while (v2 < v1) {
-			System.out.print("O segundo valor precisa ser maior que o primeiro, digite novamente: ");
+			System.out.print("O segundo valor precisa ser maior que o primeiro.\nDigite novamente: ");
 			v2 = scanner.nextInt();
 		}
 		

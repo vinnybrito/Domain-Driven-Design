@@ -16,6 +16,7 @@ public class Ex47F {
         String resposta = "S";
 
         while (resposta.toUpperCase().equals("S")) {	
+        	
         	int fatorial = 1;
         	
             System.out.print("\nDigite o número (positivo) que você quer calcular o fatorial: ");
