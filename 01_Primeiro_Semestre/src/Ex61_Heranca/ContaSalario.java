@@ -8,4 +8,10 @@ public class ContaSalario extends Conta {
 		super(agencia, numero);
 	}
 	
+	public String mostrarContaSalario() {
+		return "Conta Salário - Agência: " + this.agencia +
+			   " - Número: " + this.numero +
+			   " - Saldo: " + this.saldo;
+	}
+	
 }

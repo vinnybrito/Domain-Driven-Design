@@ -1,9 +1,9 @@
 package Ex61_Heranca;
 
 public class Conta {
-	private String agencia;
-	private String numero;
-	private double saldo;
+	protected String agencia;
+	protected String numero;
+	protected double saldo;
 	
 	public String getAgencia() {
 		return agencia;

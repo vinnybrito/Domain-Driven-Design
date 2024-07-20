@@ -18,4 +18,11 @@ public class ContaPoupanca extends Conta {
 		this.rentabilidade = rentabilidade;
 	}
 	
+	public String mostrarContaPoupanca() {
+		return "\nConta Poupança - Agência: " + this.agencia +
+			   " - Número: " + this.numero +
+			   " - Saldo: " + this.saldo +
+			   " - Rentabilidade: " + this.rentabilidade;
+	}
+	
 }
