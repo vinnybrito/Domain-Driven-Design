@@ -12,7 +12,7 @@ public class Ex50DW {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		int a, b, par = 0, impar = 0, inicio, fim;
+		int par = 0, impar = 0, a, b;
 		
 		System.out.printf("Digite um valor qualquer(A): ");
 		a = scanner.nextInt();
@@ -21,25 +21,22 @@ public class Ex50DW {
 			System.out.printf("Digite um valor qualquer(B): ");
 			b = scanner.nextInt();
 		} while (a == b);
-        
-        if (a < b) {
-            inicio = a;
-            fim = b;
-        } else {
-            inicio = b;
-            fim = a;
-        }
-        
-        int i = inicio;
+
+		int inicio = a, fim = b;
+		
+		if (a > b) {
+			inicio = b;
+			fim = a;
+		}
         
         do {
-        	if ((i % 2) == 0) {
+        	if ((inicio % 2) == 0) {
         		par++;
         	} else {
         		impar++;
         	}
-        	i++;
-        } while (i <= fim);
+        	inicio++;
+        } while (inicio <= fim);
 		
 		System.out.print("\nA quantidade de números pares é: " + par);
 		System.out.print("\nA quantidade de números ímpares é: " + impar);
