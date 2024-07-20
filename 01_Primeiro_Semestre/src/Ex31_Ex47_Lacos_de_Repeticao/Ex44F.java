@@ -16,7 +16,7 @@ public class Ex44F {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		int i, valor, maior = 0, soma = 0;
+		int i, valor, media, maior = 0, soma = 0;
 		
 		for (i = 1; i < 11; i++) {
 			System.out.print("Digite o " + i + "º valor: ");
@@ -35,7 +35,11 @@ public class Ex44F {
 			soma = soma + valor;
 		}
 		
+		media = soma / (i - 1);
+
 		System.out.println("O maior número é: " + maior);
+		System.out.println("A soma dos valores é: " + soma);
+		System.out.println("A média dos valores é: " + media);
 		
 		scanner.close();
 	}

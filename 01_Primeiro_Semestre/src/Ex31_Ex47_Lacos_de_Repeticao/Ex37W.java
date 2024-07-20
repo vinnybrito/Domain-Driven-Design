@@ -20,6 +20,7 @@ public class Ex37W {
 				System.out.printf("\n%d X %d = %d", j, i, resultado);
 				i++;
 			}
+			
 			j++;
 			
 			System.out.printf("\n\nDigite qualquer tecla para continuar...");
