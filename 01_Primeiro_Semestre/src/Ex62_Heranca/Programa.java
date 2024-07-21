@@ -1,5 +1,7 @@
 package Ex62_Heranca;
 
+import java.util.Scanner;
+
 public class Programa {
 	
 	// 34. Vamos fazer um sistema de cadastro de pessoas (apenas inclusão). 
@@ -13,8 +15,9 @@ public class Programa {
 	4 - Sair*/
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner scanner = new Scanner(System.in);
+		
+		scanner.close();
 	}
 
 }
