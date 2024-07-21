@@ -19,7 +19,7 @@ public class Programa {
 			
 			Endereco endereco = viacepservice.getEndereco(cep);
 			
-			System.out.println("Logradouro: " + endereco.getLogradouro() +
+			System.out.println("\nLogradouro: " + endereco.getLogradouro() +
 					           "\nBairro: " + endereco.getBairro() +
 					           "\nCidade: " + endereco.getLocalidade());
 			
