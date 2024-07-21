@@ -17,4 +17,11 @@ public class PessoaJuridica extends Pessoa {
 		this.CNPJ = CNPJ;
 	}
 	
+	public String mostrarPessoaJuridica() {
+		return "\nPessoa Jurídica -> Nome: " + this.nome +
+			   " - Sobrenome: " + this.sobrenome + 
+			   " - idade: " + this.idade +
+			   " - CNPJ: " + this.CNPJ;
+	}
+	
 }

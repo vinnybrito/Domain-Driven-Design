@@ -17,4 +17,11 @@ public class PessoaFisica extends Pessoa {
 		this.CPF = CPF;
 	}
 	
+	public String mostrarPessoaFisica() {
+		return "\nPessoa Física -> Nome: " + this.nome +
+			   " - Sobrenome: " + this.sobrenome + 
+			   " - idade: " + this.idade +
+			   " - CPF: " + this.CPF;
+	}
+	
 }
